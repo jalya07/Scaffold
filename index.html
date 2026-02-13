@@ -8,6 +8,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        @font-face {
+            font-family: testFont;
+            src: url(//fonts/PlaywriteNZBasic-VariableFont_wght.ttf);
+        }
+        .about-desc p {
+            font-family: testFont;
+        }
+        #Services h1::after{
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #009cea;
+            margin: 10px auto 0 auto;
+        }
+        #Portfolio h1::after{
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #009cea;
+            margin: 10px auto 0 auto;
+        }
+        .portfolio-categories ul li {
+            margin: 0 10px;
+            padding: 5px 10px;
+        }
+        .portfolio-categories:hover ul li {
+            color: #009cea;
+        }
+        
+    </style>
+    
 </head>
 
 <body>
@@ -80,27 +116,88 @@
                 <img src="https://bootstrapmade.com/content/demo/Scaffold/assets/img/hero-img.png" width="400" alt="">
             </div>
         </section>
-        <section id="about" style="display: flex; justify-content: space-between; align-items: center; text-align: center; padding: 100px 0;">
+        <section id="about" style="display: flex; justify-content: space-around; text-align: center; padding: 100px 0;">
             <div class="about-image">
                 <img src="https://bootstrapmade.com/content/demo/Scaffold/assets/img/about.jpg" height="400" width="500"
                     alt="">
             </div>
-            <div class="about-info">
+            <div class="about-info" style="width: 600px;">
                 <div class="about-title">
                     <h3>Who we are</h3>
                     <h1>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti
                         reprehenderit.</h1>
                 </div>
                 <div class="about-desc">
-                    <p>Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor
+                    <p style="-webkit-user-select: none;
+                            -khtml-user-select: none;
+                            -moz-user-select: none;
+                            -o-user-select: none;
+                            user-select: none;">Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor
                         consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est
                         corrupti.
                     </p>
                 </div>
                 <div class="about-button">
-                    <a href="" style="display: block; width: 96px;background-color:#009cea; padding: 10px 20px; border-radius: 3px;color: #fff;text-decoration: none;">read more <i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href=""
+                        style="display: block; width: 96px;background-color:#009cea; padding: 10px 20px; border-radius: 3px;color: #fff;text-decoration: none;">read
+                        more <i class="fa-solid fa-arrow-right-long"></i></a>
                 </div>
             </div>
+        </section>
+        <section id="Services">
+            <div class="section-header" style="text-align: center; padding: 100px 0;">
+                <h1>Services</h1>
+                <p>We offer a wide range of services to meet your needs.</p>
+            </div>
+            <div class="services-items" style="display: flex; justify-content: space-around; text-align: center; padding: 0 100px 100px 100px;">
+                <div class="service-item">
+                    <i class="fa-solid fa-desktop"></i>
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique velit, Atque!</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <h3>Graphic Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique velit, Atque!</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique velit, Atque!</p>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-mobile-alt"></i>
+                    <h3>Mobile Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique velit, Atque!</p>
+                </div>
+            </div>
+        </section>
+        <section id="Portfolio">
+                <div class="section-header" style="text-align: center; padding: 100px 0;">
+                    <h1>Portfolio</h1>
+                    <p>Check out our latest work.</p>
+                </div>
+                <div class="portfolio-categories">
+                    <ul style="display: flex; justify-content: center; list-style: none;">
+                        <li>All</li>
+                        <li>App</li>
+                        <li>Product</li>
+                        <li>Web</li>
+                        <li>Mobile</li>
+                    </ul>
+                </div>
+                <div class="portfolio-items">
+                    <div class="portfolio-item" style="background-image: url(https://bootstrapmade.com/content/demo/Scaffold/assets/img/portfolio/app-1.jpg); width: 300px; height: 200px;background-size: cover;background-repeat: no-repeat;">
+                        <div class="portfolio-item-overlay" style="position: relative; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s ease;display: none;">
+                            <span>App 1</span>
+                            <div class="overlay-item-button" style="position: absolute; display: flex; gap: 10px;justify-content: center; align-items: center; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <p style="position: absolute; bottom: 10px; left: 10px; color: #fff;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique velit, Atque!</p>
+                        </div>
+                    </div>
+                </div>
         </section>
     </div>
 </body>
